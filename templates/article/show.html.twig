@@ -1,0 +1,20 @@
+{% extends 'base.html.twig'  %}
+
+{# Yay #}
+
+{% block title %}Read {{ title }}{% endblock %}
+
+{%  block body %}
+<h1>{{ title }}</h1>
+
+<p>Completion for chained expressions is only available for Java and requires the project to be built with the PhpStorm compiler (not the Gradle compiler). </p>
+<p>Statements completion enables you to create syntactically correct code constructs. It inserts the necessary syntax elements (parentheses, braces, semicolons etc.) and gets you in a position where you can start typing the next statement.</p>
+
+<h2>Comments ({{ comments|length }})</h2>
+    <ul>
+        {% for comment in comments %}
+        <li>{{ comment }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
